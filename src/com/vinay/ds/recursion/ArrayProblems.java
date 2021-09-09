@@ -3,6 +3,35 @@ package com.vinay.ds.recursion;
 public class ArrayProblems {
 	
 	
+	public static int[] topscore(int[] arr) {
+		int[] ret = new int[3];
+		// assuming 
+		for(int i=0;i < arr.length;i++) {
+			if(ret[0] < arr[i]) {
+				ret[2] = ret[1];
+				ret[1] = ret[0];
+				ret[0] = arr[i];
+				
+			}  else if(ret[1] < arr[i]) {
+					  ret[2] = ret[1];
+					  ret[1] = arr[i]; }
+				  else if(ret[2] < arr[i]) {
+				  ret[2] = arr[i]; }
+				 
+			
+		}
+		
+		return ret;
+	}
+	
+	public static int diagnalSum(int[][] arr) {
+		int sum=0;
+		for(int i=0;i < arr.length;i++) {
+			sum += arr[i][i];
+		}
+		return sum;
+	}
+	
 	
 	public static int[][] rotategivento90(int[][] arr){
 		
