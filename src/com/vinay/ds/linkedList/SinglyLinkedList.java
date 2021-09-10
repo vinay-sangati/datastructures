@@ -5,7 +5,12 @@ public Node<T> head;
 public Node<T> tail;
 public int size;
 
-public boolean insertFirst(T val) {
+//public boolean deleteNode(int n)
+// pop
+//peek
+// queue methods
+
+public boolean insert(T val) {
 	
 	if(head == null) {
 		Node<T> node = new Node<T>();
@@ -24,6 +29,31 @@ public boolean insertFirst(T val) {
 	return true;
 }
 
+public boolean insertAtTail(T val) {
+	
+	if(head == null) {
+		insert(val);
+	}else {
+	Node<T> next = head;
+		while(true) {
+			if(next.nextNode != null) {
+				next = next.nextNode;
+			}else {
+				Node<T> tailnode = new Node<T>();
+				tailnode.value = val;
+				next.nextNode = tailnode;
+				tail = tailnode;
+				size++;
+				break;
+			}
+			
+		}
+		
+	}
+	
+return true;	
+}
+
 public void printValues() {
 	if(head != null) {
 		Node<T> next = head;
@@ -31,8 +61,11 @@ public void printValues() {
 		System.out.println(next.value);
 		if(next.nextNode != null) {
 			next = next.nextNode;
+		}else {
+			break;
 		}
-	}while(next.nextNode != null);
+		
+	}while(true);
 	}
 }
 
