@@ -1,4 +1,4 @@
-package com.vinay.ds.recursion;
+package com.vinay.ds.arrays;
 
 public class ArrayProblems {
 	
@@ -11,7 +11,6 @@ public class ArrayProblems {
 				ret[2] = ret[1];
 				ret[1] = ret[0];
 				ret[0] = arr[i];
-				
 			}  else if(ret[1] < arr[i]) {
 					  ret[2] = ret[1];
 					  ret[1] = arr[i]; }
