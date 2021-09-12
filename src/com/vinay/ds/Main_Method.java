@@ -1,6 +1,7 @@
 package com.vinay.ds;
 
 import com.vinay.ds.linkedList.AlgorithmsLinkedList;
+import com.vinay.ds.linkedList.DoublyLinkedList;
 import com.vinay.ds.linkedList.SinglyLinkedList;
 
 public class Main_Method {
@@ -25,17 +26,25 @@ public static void main(String[] args) {
 	 * squarearray))); System.out.println(ArrayProblems.diagnalSum(squarearray));
 	 * System.out.println(Arrays.toString(ArrayProblems.topscore(arrnumber)));
 	 */
-	SinglyLinkedList<Integer> ll = new SinglyLinkedList<Integer>();
-	ll.insert(111111);
-	ll.insert(32222);
-	ll.insert(5444);
-	ll.insert(443);
-	ll.insert(4); 
-	 // O(n)
-	//ll.printValues();
 	
 	
-	AlgorithmsLinkedList.findNthFromLast(4,ll);
+	/*
+	 * SinglyLinkedList<Integer> ll = new SinglyLinkedList<Integer>();
+	 * ll.insert(111111); ll.insert(32222); ll.insert(5444); ll.insert(443);
+	 * ll.insert(4); // O(n) //ll.printValues();
+	 * 
+	 * 
+	 * AlgorithmsLinkedList.findNthFromLast(4,ll);
+	 */
+	
+	DoublyLinkedList<String> dll = new DoublyLinkedList<String>();
+	dll.insertHead("vinay");
+	dll.insertHead("pallavi");
+	dll.insertHead("kids");
+	dll.insertHead("parents");
+	//dll.printAllForward();
+	//System.out.println();
+	dll.printareverse();
 
 }
 }
