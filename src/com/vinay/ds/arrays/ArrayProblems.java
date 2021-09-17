@@ -37,7 +37,7 @@ public class ArrayProblems {
 		int[][] arr2 = new int[arr.length][arr.length];
 		for(int i=0; i< arr[0].length;i++) {
 		for(int j=0; j< arr[0].length;j++) {
-			arr2[i][j] = arr[(arr[0].length-1) - j][i]; 
+			arr2[i][j] = arr[(arr[0].length-1) - j][i]; //need to think some math here to get the logic
 		}
 		}
 		return arr2;

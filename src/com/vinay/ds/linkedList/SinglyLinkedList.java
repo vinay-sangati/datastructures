@@ -11,7 +11,7 @@ public int size;
 // queue methods
 
 public boolean insert(T val) {
-	
+	// came to know that the insertion always happens at the last
 	if(head == null) {
 		Node<T> node = new Node<T>();
 		node.value = val;
